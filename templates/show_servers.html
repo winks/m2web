@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class="entries">
+  {% for entry in entries %}
+    <li><em>
+({{ entry.id|safe }}) 
+{{ entry.default_host|safe }}:{{ entry.port|safe }}</em> -
+        [{{ entry.access_log|safe }}] -
+        [{{ entry.error_log|safe }}] -
+        [{{ entry.chroot|safe }}] -
+        [{{ entry.pid_file|safe }}]<br />
+  {% else %}
+    <li><em>Unbelievable. No servers here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}

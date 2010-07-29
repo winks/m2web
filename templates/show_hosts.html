@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class="entries">
+  {% for entry in entries %}
+    <li><em>
+({{ entry.id|safe }})
+({{ entry.server_id|safe }}) {{ entry.name|safe }}</em> - 
+        {{ entry.matching|safe }} 
+        ({{ entry.maintenance|safe }})<br />
+  {% else %}
+    <li><em>Unbelievable. No hosts here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}

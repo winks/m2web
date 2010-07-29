@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class="entries">
+{% for table in var.tables %}
+  <li><a href="{{ var.base }}/show/{{table}}">{{table}}</a></li>
+{% endfor %}
+  </ul>
+{% endblock %}

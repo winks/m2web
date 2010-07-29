@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class="entries">
+  {% for entry in entries %}
+    <li><em>({{ entry.id|safe }}) {{ entry.path|safe }}</em> -
+        [{{ entry.reversed|safe }}] -
+        [{{ entry.host_id|safe }}] -
+        [{{ entry.target_id|safe }}] -
+        [{{ entry.target_type|safe }}]<br />
+  {% else %}
+    <li><em>Unbelievable. No routes here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}

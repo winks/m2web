@@ -1,0 +1,7 @@
+m2web
+~~~~~
+
+A web frontend for mongrel2 configs.
+Shamelessly based on flaskr.
+
+:license: BSD

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class="entries">
+  {% for entry in entries %}
+    <li><em>({{ entry.id|safe }}) {{ entry.base|safe }}:{{ entry.index_file|safe }}  {{entry.default_ctype|safe}}</em></li>
+  {% else %}
+    <li><em>Unbelievable. No directories here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}

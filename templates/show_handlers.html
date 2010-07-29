@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class="entries">
+  {% for entry in entries %}
+    <li><em>({{ entry.id|safe }})</em> -
+        [{{ entry.send_spec|safe }}] -
+        [{{ entry.send_ident|safe }}] -
+        [{{ entry.rcv_spec|safe }}] -
+        [{{ entry.recv_ident|safe }}]<br />
+  {% else %}
+    <li><em>Unbelievable. No handlers here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
